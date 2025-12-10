@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Super Achievers Team</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#c7a768" />
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="./css/index.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+
+  <!-- Main Hero Section -->
+  <div class="hero">
+    <div class="hero-background">
+      <div class="logos">
+        <img src="img/logo.png" alt="Salahmardoon Team Logo" class="main-logo">
+      </div>
+      <div class="content-wrapper">
+        <h1 class="team-title">
+          
+        <img src="img/Headling.png" alt="The Super Achievers Team Event 2025" class="headline-logo">
+        </h1>
+        
+        <!--<h2 class="event-title">RECOGNITION & AWARD EVENT</h2>-->
+      
+        <h3 class="raffle-title">RAFFLE DRAW</h3>
+        <div class="decorative-line"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Input Section -->
+  <div class="input-section">
+    <div class="input-container">
+      <!-- Status Selector -->
+  <div class="input-wrapper">
+  <label for="status-select" class="input-label">Select Status</label>
+  <div class="multi-select" id="status-select-wrapper">
+    <div class="multi-select-input" id="status-select-display">Select statuses...</div>
+    <div class="multi-select-dropdown" id="status-select-dropdown">
+      <label><input type="checkbox" value="Member"> Member</label>
+      <label><input type="checkbox" value="Distributor"> Distributor</label>
+      <label><input type="checkbox" value="Manager"> Manager</label>
+      <label><input type="checkbox" value="Senior Manager"> Senior Manager</label>
+      <label><input type="checkbox" value="Executive Manager"> Executive Manager</label>
+      <label><input type="checkbox" value="Director"> Director</label>
+      <label><input type="checkbox" value="Emerald Director"> Emerald Director</label>
+      <label><input type="checkbox" value="Sapphire Director"> Sapphire Director</label>
+      <label><input type="checkbox" value="1 Ruby Director"> 1 Ruby Director</label>
+      <label><input type="checkbox" value="2 Ruby Director"> 2 Ruby Director</label>
+      <label><input type="checkbox" value="3 Ruby Director"> 3 Ruby Director</label>
+    </div>
+  </div>
+</div>
+
+
+      <!-- Winner Count -->
+      <div class="input-wrapper">
+        <label for="winner-count" class="input-label">Number of Lucky Winners</label>
+        <input type="number" id="winner-count" name="winner-count" placeholder="Enter number..." min="1" max="100">
+      </div>
+
+      <!-- Draw Button -->
+      <button class="draw-button" id="drawButton">
+        <span class="button-text">ROLL THE DRAW!</span>
+        <div class="button-glow"></div>
+      </button>
+    </div>
+  </div>
+
+  <!-- Results Display Modal -->
+  <div id="resultsModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>🎉 LUCKY WINNERS 🎉</h2>
+        <button class="close-button" id="closeModal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div id="loader" class="loader">
+          <div class="spinner"></div>
+          <p>Drawing winners...</p>
+        </div>
+        <div id="winnersList" class="winners-list"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div id="errorMessage" class="error-message">
+      <h3>⚠️ Failed to get data. Please refresh the page.</h3>
+    </div>
+    <div class="member-count">
+      <h3>Total Registered Members: <span class="count-number" id="memberCount">0</span></h3>
+    </div>
+    <div class="footer-decoration"></div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
