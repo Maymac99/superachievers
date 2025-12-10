@@ -1078,7 +1078,7 @@ confirmBtn.addEventListener("click", async () => {
       }
     );
 
-    if (response.ok) {
+
       // Update the user's accredited status
       const userIndex = users.findIndex(u => u.rowNumber === selectedUser.rowNumber);
       if (userIndex !== -1) {
@@ -1092,9 +1092,6 @@ confirmBtn.addEventListener("click", async () => {
 
       // SUCCESS NOTIFICATION
       notify("User successfully accredited!", "success");
-    } else {
-      notify("Server error: Accreditation failed.", "error");
-    }
 
   } catch (error) {
     console.error("Error accrediting user:", error);
@@ -1114,4 +1111,5 @@ confirmBtn.addEventListener("click", async () => {
 
 </body>
 </html>
+
 
